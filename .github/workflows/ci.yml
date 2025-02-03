@@ -17,7 +17,7 @@ jobs:
       run: echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
     - name: Build da imagem Docker
-      run: docker build -t $DOCKER_USERNAME/flask-app:latest .
+      run: docker build -t brunarubackf/flask-app:latest .
 
     - name: Push da imagem para o Docker Hub
-      run: docker push $secrets.DOCKER_USERNAME/flask-app:latest
+      run: docker push brunarubackf/flask-app:latest
